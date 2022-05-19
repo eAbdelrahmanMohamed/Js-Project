@@ -1,0 +1,39 @@
+label,
+input,
+button {
+    text-align: left;
+    display: block;
+    padding: 15px;
+    width: 500px;
+    font-size: medium;
+    margin: auto;
+}
+
+form {
+    background-color: white;
+    /*width: 500px;*/
+    height: 100%;
+    align-content: center;
+    /*padding: 5%;*/
+}
+
+button {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #0077c5;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    min-width: 40%;
+}
+
+a {
+    margin-top: 15px;
+}

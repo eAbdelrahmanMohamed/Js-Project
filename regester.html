@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Create Account </title>
+</head>
+
+<body>
+    <h1>Create a New Account</h1>
+    <form action="" id="form">
+        <input required type="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+        <!--<input required type="number" id="zcode" placeholder="ZIP Code" pattern="/^[0-9]{5}$/"><br>-->
+        <input required minlength="8" id="id1" type="password" name="password" autocomplete="password" placeholder="passsword"><br>
+        <input required minlength="8" id="id" type="password" name="password" autocomplete="password" placeholder="passsword Comfirmation"><br>
+        <button id="show">show / hide password</button><br>
+
+        <button type="submit" id="new_user">submit</button>
+    </form>
+</body>
+<script src="./javascript/register.js"></script>
+
+</html>

@@ -1,0 +1,122 @@
+                        img {
+                            margin: auto;
+                        }
+                        
+                        .item-wrapper {
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                        }
+                        
+                        .item-description {
+                            width: 70%;
+                            margin: auto;
+                        }
+                        
+                        .item-name {
+                            transform: translateX(43%);
+                            margin-bottom: 15px;
+                        }
+                        
+                        #additem {
+                            background-color: #7367f0;
+                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7367f0;
+                            color: white;
+                            padding: 1rem;
+                            border: none;
+                            border-radius: 5px;
+                            position: fixed;
+                            /*margin: auto;*/
+                            transform: translateY(-970vh) translateX(0%);
+                            /*transform: translate(-950vh, 2150%);*/
+                        }
+                        
+                        #over {
+                            height: 100vh;
+                            width: 100vw;
+                            background-color: #eee;
+                            /*opacity: 0.5;*/
+                            z-index: 2000px;
+                            transform: translateY(-1050%);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            visibility: hidden;
+                        }
+                        
+                        form {
+                            position: relative;
+                            /*display: flex;*/
+                            margin: auto;
+                            background-color: #fff;
+                            width: 500px;
+                            height: 100%;
+                            justify-content: center;
+                            align-content: center;
+                            padding: 5%;
+                        }
+                        
+                        label {
+                            font-size: 20px;
+                            /*margin-right: 1em;*/
+                        }
+                        /*.card {
+                            transform: translateY(-100%);
+                        }
+                        */
+                        /*#view {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        */
+                        
+                        input,
+                        #input,
+                        label,
+                        textarea {
+                            text-align: left;
+                            display: block;
+                            padding: 15px;
+                            width: 300px;
+                            font-size: medium;
+                            margin-left: auto;
+                            margin-top: 1px;
+                        }
+                        
+                        input {
+                            width: 95%;
+                        }
+                        
+                        button {
+                            color: white;
+                            text-align: center;
+                            /*margin-top: 10px;*/
+                            background-color: #0077c5;
+                            padding: 5px;
+                        }
+                        
+                        #range {
+                            margin-left: 150px;
+                            margin-bottom: 5px;
+                        }
+                        
+                        #close {
+                            /*position: absolute;*/
+                            transform: translateY(-900%);
+                            margin-top: 0px;
+                            padding: 15px;
+                            border: none;
+                        }
+                        
+                        #edit {
+                            /*position: absolute;
+                            transform: translateX(70vw) translateY(-20px);*/
+                            display: flex;
+                            display: none;
+                        }
+                        /*#edit input {
+                            width: 200px;
+                        }*/
+                        /*.item-price h6 {
+                            position: fixed;
+                        }*/
