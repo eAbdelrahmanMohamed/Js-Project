@@ -1100,6 +1100,12 @@ svg.muted {
     height: 16px;
 }
 
+.item-rating {
+    border: 1px solid;
+    padding: 1em;
+    background-color: rgba(115, 103, 240, 0.12);
+}
+
 .item-options svg {
     width: 14px;
     height: 14px;

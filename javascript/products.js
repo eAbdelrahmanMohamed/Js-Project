@@ -1,4 +1,4 @@
- const products = [{
+ let products = [{
          id: 1,
          name: 'Apple Watch Series 5',
          price: 339.99,
@@ -376,3 +376,9 @@
 
      },
  ];
+
+ if (localStorage.products === undefined) {
+     localStorage.setItem("products", JSON.stringify(products));
+ } else {
+     products = JSON.parse(localStorage.getItem("products"))
+ }

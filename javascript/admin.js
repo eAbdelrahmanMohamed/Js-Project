@@ -8,6 +8,7 @@ function delet(i) {
 
     console.log(StoredProducts);
     document.getElementById("view").innerHTML = " ";
+    window.location.assign("./admin.html");
     displayProducts(StoredProducts);
 }
 
@@ -110,7 +111,7 @@ function displayProducts(StoredProducts) {
           <h6 class='item-price' onclick='Update(${i},"item-price")'>$${StoredProducts[i].price}</h6>
 
         </div>
-		<div id="edit"><input type="number" id="input"></br><button id="ok">ok</button></div>
+		<div id="edit"><input type="" id="input"></br><button id="ok">ok</button></div>
 
         <h6 class='item-name' onclick='Update(${i},"item-name")'>
          ${StoredProducts[i].name}--${StoredProducts[i].brand}
@@ -156,7 +157,15 @@ function Update(x, cls) {
             okbtn.innerText = "enter new rate";
             okbtn.style.marginTop = "3%";
             input.type = "range";
-            input.innerHTML = `<input type="range" max="5" min="1">`
+            let attr = document.createAttribute("max");
+            let attr2 = document.createAttribute("min");
+
+            attr.value = 5;
+            attr2.value = 1;
+            input.setAttributeNode(attr);
+            input.setAttributeNode(attr2);
+
+            input.innerHTML = `<input type="range" max='5' min='1'>`
 
             //alert("class item-wrapper");
             break;
@@ -180,6 +189,7 @@ function Update(x, cls) {
     }
     z.addEventListener("click", function() {
         document.getElementById("edit").style.display = "flex";
+        cls.innerHTML += document.getElementById("edit");
     })
     okbtn.addEventListener("click", function() {
 
@@ -335,18 +345,18 @@ close.addEventListener("click", function() {
 let photo = document.getElementById("photo");
 let Name = document.getElementById("name");
 let Price = document.getElementById("price");
-let Rate = document.getElementById("range");
-let discription = document.getElementById("discp");
+let r = document.getElementById("range");
+let d = document.getElementById("discp");
 let add = document.getElementById("add");
-let counter = 27;
+let counter = JSON.parse(localStorage.getItem("products")).length;
 
 add.addEventListener("click", function(IMG, NAME, PRICE, RATE, DIS) {
     IMG = photo.value;
     NAME = Name.value;
     PRICE = Price.value;
-    RATE = Rate.value;
-    DIS = discription.value;
-    let newitem = { id: ++counter, name: NAME, price: PRICE, rate: RATE, img: IMG, discription: DIS, };
+    RATE = JSON.parse(r.value);
+    DIS = d.value;
+    let newitem = { id: ++counter, name: NAME, price: PRICE, rateing: RATE, img: IMG, description: DIS };
     let StoredProducts = JSON.parse(localStorage.getItem("products"));
     //products.push(newitem);
     StoredProducts.push(newitem);
@@ -372,7 +382,7 @@ add.addEventListener("click", function(IMG, NAME, PRICE, RATE, DIS) {
 	  stroke-linecap='round'
 	  stroke-linejoin='round'
 	  class='${
-		RATE > 0 ? 'warning' : 'muted'
+		RATE> 0 ? 'warning' : 'muted'
 	  } feather feather-star'
 	>
 	  <polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'></polygon>
@@ -464,6 +474,15 @@ add.addEventListener("click", function(IMG, NAME, PRICE, RATE, DIS) {
 
     document.getElementById("over").style.visibility = "hidden";
     displayProducts(StoredProducts);
+    alert(RATE)
+    window.location.assign("./admin.html")
+
 
 })
+
 displayProducts(JSON.parse(localStorage.getItem("products")));
+
+let main = document.getElementById("main");
+main.addEventListener("click", function() {
+    window.location.assign("./main.html")
+})

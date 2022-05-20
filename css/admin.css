@@ -26,18 +26,37 @@
                             border: none;
                             border-radius: 5px;
                             position: fixed;
+                            top: 50%;
+                            right: 50%;
                             /*margin: auto;*/
-                            transform: translateY(-970vh) translateX(0%);
+                            transform: translateY(9vh) translateX(-40vw);
                             /*transform: translate(-950vh, 2150%);*/
                         }
                         
+                        #main {
+                            background-color: #7367f0;
+                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7367f0;
+                            color: white;
+                            padding: 1rem;
+                            border: none;
+                            border-radius: 5px;
+                            position: fixed;
+                            top: 50%;
+                            right: 0px;
+                            transform: translateY(9vh) translateX(-3vw);
+                        }
+                        
                         #over {
+                            position: absolute;
                             height: 100vh;
                             width: 100vw;
                             background-color: #eee;
                             /*opacity: 0.5;*/
                             z-index: 2000px;
-                            transform: translateY(-1050%);
+                            /*transform: translateY(-1050%);*/
+                            top: 50%;
+                            right: 50%;
+                            transform: translate(50%, -50%);
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -94,11 +113,11 @@
                             background-color: #0077c5;
                             padding: 5px;
                         }
-                        
-                        #range {
+                        /*#range {
                             margin-left: 150px;
                             margin-bottom: 5px;
                         }
+                        */
                         
                         #close {
                             /*position: absolute;*/

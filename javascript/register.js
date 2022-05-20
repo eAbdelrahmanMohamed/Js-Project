@@ -67,7 +67,7 @@ new_user.addEventListener("click", function() {
             if (holder !== get_Cus[i]) {
                 get_Cus.push(holder)
                 localStorage.setItem("customers", JSON.stringify(get_Cus))
-                window.location.assign("./cart.html");
+                window.location.assign("./login.html");
 
             }
             break;
@@ -78,13 +78,17 @@ new_user.addEventListener("click", function() {
             if (holder !== get_adn[i]) {
                 get_adn.push(holder)
                 localStorage.setItem("admins", JSON.stringify(get_adn));
-                window.location.assign("./admin.html");
+                window.location.assign("./login.html");
             }
             break;
 
         }
-        if (get_Cus[i] == holder || holder == get_adn[i]) {
+        if (JSON.parse(get_Cus[i]) === JSON.parse(holder) || JSON.parse(holder) === JSON.parse(get_adn[i])) {
             alert("this user is already Existing/n please enter new email and password");
+            break;
+        }
+        if (pass_confirm.value !== inpObj.value) {
+            alert("please enter same password or click on confirmation field to insert a copy");
             break;
         }
         //switch (holder.password) {
